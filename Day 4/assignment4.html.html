@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+         .clock {
+             width: 500px;
+             height: 500px;
+             display: inline-block;
+             padding: 20px;
+             background-color: grey;
+             border-radius: 50%;
+             border: 30px solid rgb(54, 1, 10);
+             position: absolute;
+             margin: auto;
+             top: 50px;
+             right: 50px;  
+             bottom: 50px; 
+             left: 50px; 
+             background-image: url("abstract-banner-background-with-red-shapes_1361-3348.jpg");
+             background-size: cover;
+         }    
+         .sec {
+             height: 250px;
+             width: 5px;
+             left: 245px;
+             background-color:red;
+             transform-origin: bottom;
+             transform: translate(-50%) rotate(110deg);
+
+         }
+        .min {
+            height: 250px;
+            width: 10px;
+            left: 245.5px;
+            background: #000;
+            top: -250px;
+            transform: translateX(-50%) rotate(30deg);
+            transform-origin: bottom;
+            }
+         .Hour {
+             height: 180px;
+             width: 14px;
+             left: 240px;
+             background-color:black;
+             top: -430px;
+             
+         }
+         .clock::before {
+             content: '';
+             width: 25px;
+             height: 25px;
+             border-radius: 50%;
+             background-color: rgb(71, 2, 17);
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             z-index: 999;
+            }
+            .sec, .Hour, .min{
+             line-height: 45px;
+             position: relative;
+             transform-origin: bottom;
+            }
+         
+</style>
+<body>
+    <div class="clock">
+        <div class="sec"></div>
+        <div class="min"></div>
+        <div class="Hour"></div>
+    </div>
+    
+</body>
+</html>
