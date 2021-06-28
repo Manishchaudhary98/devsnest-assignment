@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(191, 118, 251);
+    }
+</style>
+<body >
+        <h1> addEventListener</h1>
+        
+        <p id="event">Click me.</p>
+        <h1>The onclick Event</h1>
+          
+        <button onclick="myFunction1()">Click me</button>
+        
+        <p id="event1"></p>
+        
+        <script>
+        document.getElementById("event").addEventListener("click", myFunction);
+        
+        function myFunction() {
+          document.getElementById("event").innerHTML =" DO GAJ DOORI MASK HAI ZAROORI !";
+        }
+        function myFunction1() {
+          document.getElementById("event1").innerHTML = "stay safe stay healthy!";
+        }
+        </script>
+</body>
+</html>
