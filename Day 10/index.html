@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>memory game</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    background-color: #000000;
+    background-image: linear-gradient(305deg, #fffb02 0%, #fb8906 84%);
+    background-image: url(logo.jpg);
+    background-size: cover;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-image: linear-gradient(#0bd7f1f5);
+}
+.cards{
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    box-shadow: 0px 2px 5px rgba(245, 10, 10, 0.5);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ,opacity 0.3s ease-in;
+    cursor: pointer;
+    background-color: chocolate;
+}
+
+.frontface,.backface{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.backface{
+    transform:rotateY(180deg);
+}
+.flip{
+    transform:rotateY(180deg);
+}
+.won{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    display: none;
+}
+h1{
+    color:#e85d04;
+    text-shadow:2px 3px #f79558;
+}
+.Play-again{
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    background: #17e804;
+    box-shadow: 4px 4px 7px #509403,-1px -1px 7px #05eaff;
+    border: 0;
+    padding:15px 0px;
+    margin-top: 10px;
+    color:#000;
+    width: 100%;
+}
+.Play-again:focus{
+    font-size: 1.7rem;
+    border-radius: 10px;
+    background: #78c7f5;
+    box-shadow: inset 4px 4px 14px #07b0f3,
+                inset -1px -1px 14px #7eff06;
+}
+h2 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+  
+}
+
+
+</style>
+<body>
+    <h2>Angry Birds(Memory Game)</h2>
+    <div class="container">
+        <div class="cards" data-name="RED" data-id="1">
+            <div class="frontface" ></div>
+            <img class="backface" src="OIP (2).jpg" alt="">
+        </div>
+        <div class="cards" data-name="RED" data-id="2">
+            <div class="frontface" ></div>
+            <img class="backface" src="OIP (2).jpg" alt="">
+        </div>
+        <div class="cards" data-name="chuck" data-id="3" >
+            <div class="frontface" ></div>
+            <img class="backface" src="OIP (4).jpg" alt="">
+        </div>
+        <div class="cards" data-name="chuck" data-id="4" >
+            <div class="frontface" ></div>
+            <img class="backface" src="OIP (4).jpg" alt="">
+        </div>
+        <div class="cards" data-name="bomb" data-id="5">
+            <div class="frontface" ></div>
+            <img class="backface" src="bomb.jpg" alt="">
+        </div>
+        <div class="cards" data-name="bomb" data-id="6">
+            <div class="frontface" ></div>
+            <img class="backface" src="bomb.jpg" alt="">
+        </div>
+        <div class="cards" data-name="leonard" data-id="7">
+            <div class="frontface" ></div>
+            <img class="backface" src="OIP (3).jpg" alt="">
+        </div>
+        <div class="cards" data-name="leonard" data-id="8">
+            <div class="frontface" ></div>
+            <img class="backface" src="OIP (3).jpg" alt="">
+        </div>
+        <div class="cards" data-name="Mighty Eagle" data-id="9">
+            <div class="frontface"></div>
+            <img class="backface" src="blue.jpg" alt="">
+        </div>
+        <div class="cards" data-name="Mighty Eagle" data-id="10">
+            <div class="frontface"></div>
+            <img class="backface" src="blue.jpg" alt="">
+        </div>
+        <div class="cards" data-name="Mighty Eagle" data-id="11">
+            <div class="frontface"></div>
+            <img class="backface" src="angry bird.png" alt="">
+        </div>
+        <div class="cards" data-name="Mighty Eagle" data-id="12">
+            <div class="frontface"></div>
+            <img class="backface" src="angry bird.png" alt="">
+        </div>
+        <div class="won">
+            <h1>Winner Winner Angry Dinner!!</h1>
+            <a href="./index.html"><button class="Play-again"> Play again!! </button></a>
+        </div>
+        <script src="./script.js"></script>
+</body>
+
+</html>
